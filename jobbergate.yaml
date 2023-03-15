@@ -1,0 +1,12 @@
+jobbergate_config:
+  default_template: sample-script.py.j2
+  output_directory: .
+  template_files:
+    - sample-script.py.j2
+application_config:
+  job_name: sample_job
+  foo: FOO
+  bar: BAR
+  baz: BAZ
+  workdir: /myuserhomedir
+

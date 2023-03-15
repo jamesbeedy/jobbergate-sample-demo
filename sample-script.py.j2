@@ -1,0 +1,12 @@
+#!/usr/bin/env python3
+
+#SBATCH -J {{ data['job_name'] }}
+#SBATCH -t 60
+
+print("Executing sample job script")
+with open("{{ data['workdir'] }}/sample-output.txt", mode="w") as sample_file:
+    print("I am a sample job script", file=sample_file)
+    print("foo={{ data['foo'] }}", file=sample_file)
+    print("bar={{ data['bar'] }}", file=sample_file)
+    print("baz={{ data['baz'] }}", file=sample_file)
+
